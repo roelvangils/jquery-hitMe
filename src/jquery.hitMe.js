@@ -42,7 +42,7 @@
         $target.append('<i data-hitarea />');
 
         // Ensure that all other links, buttons and input fields inside container remain functional
-        $container.find('a, input, button').not($target).css({ 'position' : 'relative' , 'z-index' : '9999' });
+        $container.find('a, button, input, textarea').not($target).css({ 'position' : 'relative' , 'z-index' : '9999' });
 
       };
     });
