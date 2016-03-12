@@ -44,7 +44,6 @@
         // Ensure that all other links, buttons and input fields inside container remain functional
         $container.find('a, button, input, textarea').not($target).css({ 'position' : 'relative' , 'z-index' : '9999' });
 
-        console.log($target);
       };
     });
 
