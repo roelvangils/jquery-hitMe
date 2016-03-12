@@ -19,10 +19,10 @@
     */
 
     // This CSS selector will expand each <i data-hitarea /> to the dimensions of its (relatively positioned) container
-    var $css = "<style>i[data-hitarea]{display:block;position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}</style>";
+    var $css = "<style>i.hitMe{display:block;position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}</style>";
 
     // Insert CSS before </body> (if not already set by another call of this plugin)
-    $('body:not([data-hitarea-set])').append($css).attr('data-hitarea-set', true);
+    $('body:not([data-hitMe-set])').append($css).attr('data-hitMe-set', true);
 
     // Loop through all HTML elements that match query selector
     return this.each(function() {
@@ -39,11 +39,12 @@
         $container.css('position','relative');
 
         // Add invisible hit area to target link
-        $target.append('<i data-hitarea />');
+        $target.append('<i class="hitMe" />');
 
         // Ensure that all other links, buttons and input fields inside container remain functional
         $container.find('a, button, input, textarea').not($target).css({ 'position' : 'relative' , 'z-index' : '9999' });
 
+        console.log($target);
       };
     });
 
