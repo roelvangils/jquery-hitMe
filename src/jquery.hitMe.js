@@ -1,6 +1,6 @@
 /*!
  * jQuery hitMe Plugin v0.1
- * https://github.com/xyz
+ * https://github.com/roelvangils/jquery-hitMe/
  * Copyright 2016 Roel Van Gils (@roelvangils)
  * Released under the MIT license
  */
